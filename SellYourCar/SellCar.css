@@ -1,0 +1,209 @@
+* {
+    font-family: 'Lato', sans-serif;
+    color: white;
+    justify-items: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+body {
+    width: 1440px;
+    height: 2636px;
+    align-items: center;
+    background-color: #0b0c10;
+}
+/* --------------------1--------------------- */
+nav.p1 {
+    width: 1400px;
+    height: 54px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    justify-items: center;    
+    /* position: fixed; */
+    padding-left: 20px;
+    padding-right: 20px;
+    top: 0;
+    left: 0;
+    p {
+        font-size: 14px;
+        font-weight: 600;
+    }
+
+    .logo {
+        width: 117px;
+        height: 32px;
+    }
+
+    .menu {
+        width: 50%;
+        height: 32px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        justify-items: center;
+
+        .menu1 {
+            width: 30%;
+            height: 32px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+
+            img.menu1 {
+                width: 16px;
+                height: 8px;
+            }
+        }
+
+
+    }
+
+    .login {
+        width: 20%;
+        height: 32px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+            
+        .login1 {
+            width: 70px;
+            height: 32px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+            img.login1 {
+                width: 24px;
+                height: 24px;
+            }
+        }
+
+        .login2 {
+            width: 70px;
+            height: 32px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+            img.login2 {
+                width: 24px;
+                height: 24px;
+            }
+        }
+    }
+}
+/* --------------------2--------------------- */
+.p2head {
+    width: 1315px;
+    height: 195px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 125px;
+    background-color: #12232E;
+
+    .p21 {
+        font-weight: 600;
+        font-size: 48px;
+        margin-bottom: 20px;
+    }
+
+    .p22 {
+        font-weight: 600;
+        font-size: 18px;
+    }
+}
+/* --------------------3--------------------- */
+.p3detail {
+    
+}
+
+
+
+
+
+
+/* --------------------Footer--------------------- */
+.p12 {
+    width: 1440px;
+    height: 306px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: #12232E;
+
+    .p12logo {
+        width: 138px;
+        height: 37px;
+
+    }
+
+    .p12line {
+        width: 1400px;
+        height: 0px;
+        border-top: 1px solid transparent;
+        border-image: linear-gradient(to right,transparent, #c4c4c4, transparent) 1;
+    }
+
+    .p12info {
+        width: 1060px;
+        height: 104px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .p12i1 {
+        width: 135px;
+        height: 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        align-content: flex-start;
+        p.p12i11 {
+            font-weight: 400;
+            font-size: 14px;
+            opacity: 70%;
+        }
+        p.p12i11:hover {
+            opacity: 100%;
+        }
+
+        .p12i21 {
+            font-weight: 400;
+            font-size: 14px;
+        }
+        .p12i12l{
+            width: 135px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }       
+    }
+    p.p12bot {
+            width: 185px;
+            font-weight: 400;
+            font-size: 12px;
+            color: #c4c4c4;
+        }
+}
+
+.ARROWUP {
+    width: 64px;
+    height: 64px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    border: #007cc7 1px solid;
+    background-color: #007cc7;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
