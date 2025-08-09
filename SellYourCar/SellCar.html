@@ -41,20 +41,22 @@
         <p class="p31">Car Details</p>
         <!-- ------------------------- -->
         <div class="p32">
-            <div class="p3211">
-                <p class="p31text">Title</p>
-                <input placeholder="" class="p31111">
+            <div class="p321">
+                <p class="p3text">Title</p>
+                <input placeholder="" class="p32pl">
             </div>
                 <!-- ------------------------- -->
             <div class="p322">
-                <p class="p31text">Condition</p>
-                <div class="p3121">
-                    <input type="checkbox" id="new"  class="p31210">
-                    <label for="new">New</label>
-                </div>    
-                <div class="p3121">
-                    <input type="checkbox" id="used" class="p31210">
-                    <label for="used">Used</label>
+                <p class="p3text">Condition</p>
+                <div class="p322box">
+                    <div class="p3221">
+                        <input type="radio" name="radio" id="new"  class="p3210">
+                        <label for="new">New</label>
+                    </div>    
+                    <div class="p3221">
+                        <input type="radio" name="radio" id="used" class="p3210">
+                        <label for="used">Used</label>
+                    </div>
                 </div>
             </div>
         </div>
@@ -62,38 +64,320 @@
         <div class="p33">
             <div class="p331">
                 <p class="p3text">Body Type</p>
-                <input placeholder="Select option" class="p31211">
+                <input placeholder="Select option" class="p3211">
+                <div class="p3option">
+                    <input placeholder="Search here" class="p3o1">
+                    <p class="p3o2">Sedan</p>
+                    <p class="p3o2"></p>
+                    <p class="p3o2"></p>
+                    <p class="p3o2"></p>
+                    <p class="p3o2"></p>
+                </div>
             </div>
             <div class="p331">
                 <p class="p3text">Brand</p>
-                <input placeholder="Select option" class="p31211">
+                <input placeholder="Select option" class="p3211">
+                <div class="p3option">
+                    <input placeholder="Search here" class="p3o1">
+                    <p class="p3o2">Audi</p>
+                    <p class="p3o2">BMW</p>
+                    <p class="p3o2">Chevrolet</p>
+                    <p class="p3o2">Ford</p>
+                    <p class="p3o2">Fiat</p>
+                </div>
             </div>
             <div class="p331">
                 <p class="p3text">Model</p>
-                <input placeholder="Select option" class="p31211">
+                <input placeholder="Select option" class="p3211">
+                <div class="p3option">
+                    <input placeholder="Search here" class="p3o1">
+                    <p class="p3o2">Model 1</p>
+                    <p class="p3o2">Model 2</p>
+                    <p class="p3o2">Model 3</p>
+                    <p class="p3o2">Model 4</p>
+                    <p class="p3o2">Model 5</p>
+                </div>
             </div>
         </div>
         <!-- ------------------------- -->
         <div class="p33">
             <div class="p331">
                 <p class="p3text">Year</p>
-                <input placeholder="Select option" class="p31311">
+                <input placeholder="Select option" class="p3211">
+                <div class="p3option">
+                    <input placeholder="Search here" class="p3o1">
+                    <p class="p3o2">2017</p>
+                    <p class="p3o2">2018</p>
+                    <p class="p3o2">2019</p>
+                    <p class="p3o2">2020</p>
+                    <p class="p3o2">2021</p>
+                    <p class="p3o2">2022</p>
+                    <p class="p3o2">2023</p>
+                </div>
             </div>
             <div class="p331">
                 <p class="p3text">Passenger Capacity</p>
-                <input placeholder="Select option" class="p31311">
+                <div class="p3counter">
+                    <button class="p3btn">-</button>
+                    <input type="number" value="2" class="p3input">
+                    <button class="p3btn">+</button>
+                </div>
             </div>
             <div class="p331">
                 <p class="p3text">Exterior Color</p>
-                <input placeholder="Select option" class="p31311">
+                <input placeholder="Select option" class="p3211">
+                <div class="p3option">
+                    <input placeholder="Search here" class="p3o1">
+                    <p class="p3o2">Red</p>
+                    <p class="p3o2">Green</p>
+                    <p class="p3o2">Blue</p>
+                    <p class="p3o2">Yellow</p>
+                    <p class="p3o2">Pink</p>
+                </div>
             </div>
         </div>
         <!-- ------------------------- -->
         <div class="p34">
             <p class="p3text">Description</p>
-            <textarea class="p341" placeholder="Describe your car"></textarea>
+            <textarea class="p341" placeholder="Write describe about your car"></textarea>
         </div>
     </div>
+    <!-- ------------------------------------------------------------------------ -->
+    <div class="p4engine"> 
+        <p class="p41">Engine Details</p>
+
+        <div class="p42">
+            <div class="p421">
+                <p class="p3text">Fuel Type</p>
+                <input placeholder="Select option" class="p3211">
+                <div class="p3option">
+                    <input placeholder="Search here" class="p3o1">
+                    <p class="p3o2">Gasoline</p>
+                    <p class="p3o2">Electric</p>
+                    <p class="p3o2">Hybrid</p>
+                    <p class="p3o2">Diesel</p>
+                    <p class="p3o2">CNG</p>
+                </div>
+            </div>
+            <div class="p421">
+                <p class="p3text">Mileage</p>
+                <div class="p4box">
+                    <input placeholder="" class="p421input">
+                    <p class="p4text">km</p>
+                </div>
+            </div>
+            <div class="p421">
+                <p class="p3text">Transmission</p>
+                <input placeholder="Select Option" class="p3211">
+                <div class="p3option">
+                    <input placeholder="Search here" class="p3o1">
+                    <p class="p3o2">Automatic</p>
+                    <p class="p3o2">Manual</p>
+                    <p class="p3o2">Semi-Automatic</p>
+                    <p class="p3o2">CVT</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="p42">
+            <div class="p421">
+                <p class="p3text">Drivetrain</p>
+                <input placeholder="Select option" class="p3211">
+                <div class="p3option">
+                    <input placeholder="Search here" class="p3o1">
+                    <p class="p3o2">Rear-wheel Drive</p>
+                    <p class="p3o2">Front-wheel Drive</p>
+                    <p class="p3o2">All-wheel Drive</p>
+                    <p class="p3o2">Four-wheel Drive</p>
+                    <p class="p3o2">Hybrid</p>
+                    <p class="p3o2">Electric</p>
+                    <p class="p3o2">Other</p>
+                </div>
+            </div>
+            <div class="p421">
+                <p class="p3text">Engine Capacity</p>
+                <div class="p4box">
+                    <input placeholder="" class="p421input">
+                    <p class="p4text">cc</p>
+                </div>            
+            </div>
+            <div class="p421">
+                <p class="p3text">Power</p>
+                <div class="p4box">
+                    <input placeholder="" class="p421input">
+                    <p class="p4text">hp</p>
+                </div>           
+            </div>
+        </div>
+    </div>
+    <!-- ------------------------------------------------------------------------ -->
+    <div class="p5dimension">
+        <p class="p51">Dimension</p>
+        <div class="p52">
+            <div class="p5box">
+                <p class="p5text">Length</p>
+                <div class="p5input">
+                    <input placeholder="" class="p5i1">
+                    <p class="p5i2">mm</p>
+                </div>
+            </div>
+            <div class="p5box">
+                <p class="p5text">Width</p>
+                <div class="p5input">
+                    <input placeholder="" class="p5i1">
+                    <p class="p5i2">mm</p>
+                </div>
+            </div>
+            <div class="p5box">
+                <p class="p5text">Height</p>
+                <div class="p5input">
+                    <input placeholder="" class="p5i1">
+                    <p class="p5i2">mm</p>
+                </div>
+            </div>
+            <div class="p5box">
+                <p class="p5text">Cargo Volume</p>
+                <div class="p5input">
+                    <input placeholder="" class="p5i1">
+                    <p class="p5i2">mm</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ------------------------------------------------------------------------ -->
+    <div class="p6feature">
+        <p class="p61">Feartures</p>
+        <input placeholder="Search here" class="p64">
+        <div class="p62">
+            <div class="p62checkbox">
+                <div class="p6c">
+                    <input type="checkbox" name="p62c1" class="p6c1">
+                    <label for="p62c1">Power Steering</label>
+                </div>
+                <div class="p6c">
+                    <input type="checkbox" name="p62c1" class="p6c1">
+                    <label for="p62c1">AC</label>
+                </div>
+                <div class="p6c">
+                    <input type="checkbox" name="p62c1" class="p6c1">
+                    <label for="p62c1">Alarm</label>
+                </div>
+                <div class="p6c">
+                    <input type="checkbox" name="p62c1" class="p6c1">
+                    <label for="p62c1">Bluetooth</label>
+                </div>
+            </div>
+            <div class="p62checkbox">
+                <div class="p6c">
+                    <input type="checkbox" name="p62c1" class="p6c1">
+                    <label for="p62c1">Heated Seats</label>
+                </div>
+                <div class="p6c">
+                    <input type="checkbox" name="p62c1" class="p6c1">
+                    <label for="p62c1">Wifi</label>
+                </div>
+                <div class="p6c">
+                    <input type="checkbox" name="p62c1" class="p6c1">
+                    <label for="p62c1">Cruise Control</label>
+                </div>
+                <div class="p6c">
+                    <input type="checkbox" name="p62c1" class="p6c1">
+                    <label for="p62c1">Front Parking Sensor</label>
+                </div>
+            </div>
+            <div class="p62checkbox">
+                <div class="p6c">
+                    <input type="checkbox" name="p62c1" class="p6c1">
+                    <label for="p62c1">Rear Parking Sensor</label>
+                </div>
+                <div class="p6c">
+                    <input type="checkbox" name="p62c1" class="p6c1">
+                    <label for="p62c1">Roof Rack</label>
+                </div>
+                <div class="p6c">
+                    <input type="checkbox" name="p62c1" class="p6c1">
+                    <label for="p62c1">Power Windows</label>
+                </div>
+                <div class="p6c">
+                    <input type="checkbox" name="p62c1" class="p6c1">
+                    <label for="p62c1">Sunroof</label>
+                </div>
+            </div>
+            <div class="p62checkbox">
+                <div class="p6c">
+                    <input type="checkbox" name="p62c1" class="p6c1">
+                    <label for="p62c1">USB Port</label>
+                </div>
+                <div class="p6c">
+                    <input type="checkbox" name="p62c1" class="p6c1">
+                    <label for="p62c1">Sound System</label>
+                </div>
+                <div class="p6c">
+                    <input type="checkbox" name="p62c1" class="p6c1">
+                    <label for="p62c1">Memory Seat</label>
+                </div>
+                <div class="p6c">
+                    <input type="checkbox" name="p62c1" class="p6c1">
+                    <label for="p62c1">Other</label>
+                </div>
+            </div>
+        </div>
+        <input type="text" class="p63">
+    </div>
+    <!-- ------------------------------------------------------------------------ -->
+    <div class="p7price">
+        <p class="p71">Price</p>
+        <div class="p72">
+            <p class="p721">Full Price</p>
+            <div class="p722">
+                <p class="p722text">$</p>
+                <input placeholder="" class="p722input">
+            </div>
+        </div>
+    </div>
+    <!-- ------------------------------------------------------------------------ -->
+    <div class="p8location">
+        <p class="p81">Location</p>
+        <div class="p82">
+            <p class="p821">Address</p>
+            <input placeholder="" class="p822">
+        </div>
+        <img src="Anh/p8/map.png" alt="" class="p83">
+    </div>
+    <!-- ------------------------------------------------------------------------ -->
+    <div class="p9iv">
+        <p class="p91">Images & Video</p>
+        <div class="p92">
+            <p class="p921text">Upload Image/Video</p>
+            <img src="Anh/p8/Video Input.png" class="p921">   
+        </div>
+        <div class="p93">
+            <p class="p931">Link for Video</p>
+            <input plholder="" class="p932">
+        </div>
+    </div>
+    <!-- ------------------------------------------------------------------------ -->
+    <div class="p10story">
+        <p class="p10-1">Vehicle History</p>
+        <div class="p10-2">
+            <button class="p10-21">Choose File</button>
+            <p class="p10-22">No File Choosen</p>
+        </div>
+    </div>
+    <!-- ------------------------------------------------------------------------ -->
+    <button class="p11">Sell My Car</button>
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
