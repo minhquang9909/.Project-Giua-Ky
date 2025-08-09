@@ -169,6 +169,19 @@ nav.p1 {
                 justify-items: flex-start;
                 padding-left: 10px;
             }
+            .p3210:checked::after {
+                background-color: transparent;
+                box-shadow: inset 0 0 0 4px #ccc;
+                color: #004a77;
+            }
+            /* .p6c1:checked {
+                background-color: white;
+            }
+
+            .p6c1:hover {
+                background-color: white;
+                box-shadow: inset 0 0 0 2px black;
+            } */
         }
         .p322 {
             width: 349px;
@@ -209,8 +222,9 @@ nav.p1 {
                 }
 
                 .p3210:checked + label::before {
-                    background-color: #ccc;
-                    box-shadow: inset 0 0 0 4px black;
+                    background-color: #152836; 
+                    box-shadow: inset 0 0 0 4px white;
+                    border-color: white;
                 }
             }
         }
@@ -281,6 +295,11 @@ nav.p1 {
                 font-size: 18px;
                 text-align: center;
             }
+            .p3input::-webkit-outer-spin-button,
+            .p3input::-webkit-inner-spin-button {   
+                -webkit-appearance: none;
+                margin: 0;
+            }
         }
 
     }
@@ -348,6 +367,11 @@ nav.p1 {
         }
     }
 }
+
+.p3211:hover + .p3option {
+    display: flex;
+}
+
 /* --------------------4--------------------- */
 .p4engine {
     width:  1192px;
@@ -566,6 +590,11 @@ nav.p1 {
         background-color: white;
     }
 
+    .p6c1:hover {
+        background-color: white;
+        box-shadow: inset 0 0 0 2px black;
+    }
+
     .p6c1:checked::after {
         content: "";
         position: absolute;
@@ -659,6 +688,11 @@ nav.p1 {
                 border-radius: 0 3px 3px 0;
                 padding-left: 10px;
                 color: white;
+            }
+            .p722input::-webkit-outer-spin-button,
+            .p722input::-webkit-inner-spin-button {
+                -webkit-appearance: none;
+                margin: 0;
             }
         }
     }
@@ -822,6 +856,7 @@ nav.p1 {
 }
 
 /* --------------------Footer--------------------- */
+
 .p12 {
     width: 1440px;
     height: 306px;
@@ -881,11 +916,11 @@ nav.p1 {
         }       
     }
     p.p12bot {
-            width: 185px;
-            font-weight: 400;
-            font-size: 12px;
-            color: #c4c4c4;
-        }
+        width: 185px;
+        font-weight: 400;
+        font-size: 12px;
+        color: #c4c4c4;
+    }
 }
 
 .ARROWUP {
