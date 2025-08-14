@@ -5,6 +5,7 @@
     align-items: center;
     margin: 0;
     padding: 0;
+    cursor: pointer;
 }
 body {
     width: 1440px;
@@ -427,7 +428,7 @@ nav.p1 {
             }
         }
 
-        .r3contener {
+        .r3contener.list-view {
             width: 761px;
             min-height: 1740px;
             display: flex;
@@ -550,7 +551,133 @@ nav.p1 {
                 }
             }
         }
+        .r3contener.grid-view {
+            width: 761px;
+            min-height: 1740px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+        
+            .r3box {
+                width: 362px;
+                height: 511px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                border: #12232E 1px solid;
+                flex-wrap: nowrap;
+                
+                .r31 {
+                    width: 362px;
+                    height: 200px;
+                    position: relative;
 
+                    .r311 {
+                        position: absolute;
+                    }
+                    .r312 {
+                        width: 330px;
+                        height: 189px;
+                        margin-top: 16px;
+                        margin-left: 16px;
+                        object-fit: cover;
+                    }
+                }
+
+                .r32 {
+                    width: 330px;
+                    height: 274px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    align-items: flex-start;
+                    margin-right: 10px;
+                    margin-bottom: 10px;
+                    
+                    .r32new {
+                        width: 54px;
+                        height: 25px;
+                        border: #007cc7 1px solid;
+                        color: #007cc7;
+                        border-radius: 3px;
+                        font-weight: 700;
+                        font-size: 14px;
+                        display: flex;
+                        align-content: center;
+                        justify-content: center;
+                    }
+                    .r32name {
+                        font-weight: 600;
+                        font-size: 20px;
+                    }
+                    .r32price {
+                        font-weight: 700;
+                        font-size: 24px;
+                        color: #007cc7;
+                    }
+                    .r32place {
+                        font-weight: 600;
+                        font-size: 16px;
+                    }
+                    .r32info {
+                        width: 330px;
+                        height: 56px;
+                        font-weight: 400;
+                        font-size: 16px;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        align-items: flex-start;
+                        border-bottom: #989898 1px solid;
+                        padding-bottom: 10px ;
+                        flex-wrap: wrap;
+                        
+                        .r32i1 {
+                            font-weight: 400;
+                            font-size: 16px;
+                            background-image:url(Anh/Right/Box/Calendar.png);
+                            background-repeat: no-repeat;
+                            /* background-position: 5px; */
+                            padding-left: 25px;
+                        }   
+                        .r32i2 {
+                            font-weight: 400;
+                            font-size: 16px;
+                            background-image:url(Anh/Right/Box/Wheel.png);
+                            background-repeat: no-repeat;
+                            /* background-position: 5px; */
+                            padding-left: 25px;
+                        }
+                        .r32i3 {
+                            font-weight: 400;
+                            font-size: 16px;
+                            background-image:url(Anh/Right/Box/Gas.png);
+                            background-repeat: no-repeat;
+                            /* background-position: 5px; */
+                            padding-left: 25px;
+                        }
+                        .r32i4 {
+                            font-weight: 400;
+                            font-size: 16px;
+                            background-image:url(Anh/Right/Box/People.png);
+                            background-repeat: no-repeat;
+                            /* background-position: 5px; */
+                            padding-left: 25px;
+                        }
+                    }
+                    .r32star {
+                        width: 218px;
+                        height: 24px;
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-evenly;
+                        align-items: center;
+                    }
+                }
+            }
+        }
         .r4 {
             width: 200px;
             height: 36px;

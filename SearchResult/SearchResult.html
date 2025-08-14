@@ -3,17 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Search Result</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="SearchResult.css">
 
-    <link rel="stylesheet" href="SearchResultGrid.css">
 </head>
 <body>
+    <div class="ARROWUP">
+        <img src="Anh/Left/Arrow up.png" class="Arrow">
+    </div>
     <nav class="p1">
-        <img src="Anh/Navigation/Logo.png" class="logo">
+        <img src="Anh/Navigation/Logo.png" class="logo" id="navlogo" alt="Logo">
         <div class="menu">
-            <p class="menu1">Used Cars</p>
-            <p class="menu1">Compare</p>
-            <p class="menu1">Sell</p>
+            <p class="menu1" id="usedcar">Used Cars</p>
+            <p class="menu1" id="compare">Compare</p>
+            <p class="menu1" id="sellcar">Sell</p>
             <div class="menu1">
                 <p class="menu1">Article</p>
                 <img src="Anh/Navigation/Menu1.png" class="menu1">
@@ -126,8 +131,11 @@
             </div>
             <div class="p4pr">
                 <p class="p4t1">Price Range</p>
-                <p class="p4t2">$0 - $3,000,000</p>
-                <img src="Anh/Left/Range.png" class="p4p">
+                <p class="p4t2" id="priceValue">$0 - $3,000,000</p>
+                <div class="p4slider">
+                    <input type="range" min="0" max="3000000" value="0" step="1000" id="minPrice" class="p4range">
+                    <input type="range" min="0" max="3000000" value="3000000" step="1000" id="maxPrice" class="p4range">
+                </div>
             </div>
             <button class="p5reset">Reset Filter</button>
         </div>
@@ -140,38 +148,36 @@
                         <p class="r2t211">Sort By</p>
                         <img src="Anh/Right/r2/arrow down.png" class="r2t212">
                     </div>
-                    <img src="Anh/Right/r2/bi_list-ul.png" class="r2t22">
-                    <img src="Anh/Right/r2/Group.png" class="r2t23">
+                    <img src="Anh/Right/r2/List.png" class="r2t22" id="listViewBtn" title="List View">
+                    <img src="Anh/Right/r2/Group.png" class="r2t23 active" id="gridViewBtn" title="Grid View">
                 </div>
             </div>
 
-            <div class="r3contener">
-                <div class="r3box">
-                    <div class="r31">
-                        <img src="Anh/Right/Box/Corner Ribbon.png" class="r311">
-                        <img src="Anh/Right/Box/Tesla.png" class="r312">
-                    </div>
-                    <div class="r32">
-                        <p class="r32new">New</p>
-                        <p class="r32name">Tesla Model 3 Standard Range Plus</p>
-                        <p class="r32price">$57,148</p>
-                        <p class="r32place">Florida, USA</p>
-                        <div class="r32info">
-                            <div class="r32it">
+            <div class="r3contener grid-view" id="resultsContainer">
+                <a href="../Detail/Detail.html" style="text-decoration:none; color:inherit;">
+                    <div class="r3box">
+                        <div class="r31">
+                            <img src="Anh/Right/Box/Corner Ribbon.png" class="r311">
+                            <img src="Anh/Right/Box/Tesla.png" class="r312">
+                        </div>
+                        <div class="r32">
+                            <p class="r32new">New</p>
+                            <p class="r32name">Tesla Model 3 Standard Range Plus</p>
+                            <p class="r32price">$57,148</p>
+                            <p class="r32place">Florida, USA</p>
+                            <div class="r32info">
                                 <p class="r32i1">2020</p>
                                 <p class="r32i2">Rear-wheel Drive</p>
-                            </div>
-                            <div class="r32it">
                                 <p class="r32i3">Electric</p>
                                 <p class="r32i4">5</p>
                             </div>
+                            <div class="r32star">
+                                <img src="Anh/Right/Box/Star.png" class="r32star1">
+                                <p class="r32star2">(12 Reviews)</p>
+                            </div>    
                         </div>
-                        <div class="r32star">
-                            <img src="Anh/Right/Box/Star.png" class="r32star1">
-                            <p class="r32star2">(12 Reviews)</p>
-                        </div>    
                     </div>
-                </div>
+                </a>
                 <div class="r3box">
                     <div class="r31">
                         <img src="Anh/Right/Box/Corner Ribbon.png" class="r311">
@@ -183,14 +189,10 @@
                         <p class="r32price">$82,089</p>
                         <p class="r32place">Milan, Italy</p>
                         <div class="r32info">
-                            <div class="r32it">
-                                <p class="r32i1">2021</p>
-                                <p class="r32i1">Four-wheel Drive</p>
-                            </div>
-                            <div class="r32it">
-                                <p class="r32i1">Diesel</p>
-                                <p class="r32i1">5</p>
-                            </div>
+                            <p class="r32i1">2021</p>
+                            <p class="r32i1">Four-wheel Drive</p>
+                            <p class="r32i1">Diesel</p>
+                            <p class="r32i1">5</p>
                         </div>
                         <div class="r32star">
                             <img src="Anh/Right/Box/Star.png" class="r32star1">
@@ -209,14 +211,10 @@
                         <p class="r32price">$43,735</p>
                         <p class="r32place">Caracas, Venezuela</p>
                         <div class="r32info">
-                            <div class="r32it">
-                                <p class="r32i1">2017</p>
-                                <p class="r32i1">Front-wheel Drive</p>
-                            </div>
-                            <div class="r32it">
-                                <p class="r32i1">Gasoline</p>
-                                <p class="r32i1">7</p>
-                            </div>
+                            <p class="r32i1">2017</p>
+                            <p class="r32i1">Front-wheel Drive</p>
+                            <p class="r32i1">Gasoline</p>
+                            <p class="r32i1">7</p>
                         </div>
                         <div class="r32star">
                             <img src="Anh/Right/Box/Star.png" class="r32star1">
@@ -235,14 +233,10 @@
                         <p class="r32price">$17,978</p>
                         <p class="r32place">Madrid, Spain</p>
                         <div class="r32info">
-                            <div class="r32it">
-                                <p class="r32i1">2017</p>
-                                <p class="r32i1">Front-wheel Drive</p>
-                            </div>
-                            <div class="r32it">
-                                <p class="r32i1">Gasoline</p>
-                                <p class="r32i1">5</p>
-                            </div>
+                            <p class="r32i1">2017</p>
+                            <p class="r32i1">Front-wheel Drive</p>
+                            <p class="r32i1">Gasoline</p>
+                            <p class="r32i1">5</p>
                         </div>
                         <div class="r32star">
                             <img src="Anh/Right/Box/Star.png" class="r32star1">
@@ -261,14 +255,10 @@
                         <p class="r32price">$29,791</p>
                         <p class="r32place">Bangkok, Thailand</p>
                         <div class="r32info">
-                            <div class="r32it">
-                                <p class="r32i1">2021</p>
-                                <p class="r32i1">Front-wheel Drive</p>
-                            </div>
-                            <div class="r32it">
-                                <p class="r32i1">Gasoline</p>
-                                <p class="r32i1">7</p>
-                            </div>
+                            <p class="r32i1">2021</p>
+                            <p class="r32i1">Front-wheel Drive</p>
+                            <p class="r32i1">Gasoline</p>
+                            <p class="r32i1">7</p>
                         </div>
                         <div class="r32star">
                             <img src="Anh/Right/Box/Star.png" class="r32star1">
@@ -287,14 +277,10 @@
                         <p class="r32price">$35,850</p>
                         <p class="r32place">Jakarta, Indonesia</p>
                         <div class="r32info">
-                            <div class="r32it">
-                                <p class="r32i1">2022</p>
-                                <p class="r32i1">Front-wheel Drive</p>
-                            </div>
-                            <div class="r32it">
-                                <p class="r32i1">Gasoline</p>
-                                <p class="r32i1">5</p>
-                            </div>
+                            <p class="r32i1">2022</p>
+                            <p class="r32i1">Front-wheel Drive</p>
+                            <p class="r32i1">Gasoline</p>
+                            <p class="r32i1">5</p>
                         </div>
                         <div class="r32star">
                             <img src="Anh/Right/Box/Star.png" class="r32star1">
@@ -313,14 +299,10 @@
                         <p class="r32price">$50,370</p>
                         <p class="r32place">San Antonio, USA</p>
                         <div class="r32info">
-                            <div class="r32it">
-                                <p class="r32i1">2021</p>
-                                <p class="r32i2">Four-wheel Drive</p>
-                            </div>
-                            <div class="r32it">
-                                <p class="r32i3">Hybrid</p>
-                                <p class="r32i4">5</p>
-                            </div>
+                            <p class="r32i1">2021</p>
+                            <p class="r32i2">Four-wheel Drive</p>
+                            <p class="r32i3">Hybrid</p>
+                            <p class="r32i4">5</p>
                         </div>
                         <div class="r32star">
                             <img src="Anh/Right/Box/Star.png" class="r32star1">
@@ -339,14 +321,10 @@
                         <p class="r32price">$72,655</p>
                         <p class="r32place">Suwon, South Korean</p>
                         <div class="r32info">
-                            <div class="r32it">
-                                <p class="r32i1">2021</p>
-                                <p class="r32i1">All-wheel Drive</p>
-                            </div>
-                            <div class="r32it">
-                                <p class="r32i1">Electric</p>
-                                <p class="r32i1">5</p>
-                            </div>
+                            <p class="r32i1">2021</p>
+                            <p class="r32i1">All-wheel Drive</p>
+                            <p class="r32i1">Electric</p>
+                            <p class="r32i1">5</p>
                         </div>
                         <div class="r32star">
                             <img src="Anh/Right/Box/Star.png" class="r32star1">
@@ -365,14 +343,10 @@
                         <p class="r32price">$75,790</p>
                         <p class="r32place">Jeddah, Saudi Arabia</p>
                         <div class="r32info">
-                            <div class="r32it">
-                                <p class="r32i1">2021</p>
-                                <p class="r32i1">All-wheel Drive</p>
-                            </div>
-                            <div class="r32it">
-                                <p class="r32i1">Gasoline</p>
-                                <p class="r32i1">5</p>
-                            </div>
+                            <p class="r32i1">2021</p>
+                            <p class="r32i1">All-wheel Drive</p>
+                            <p class="r32i1">Gasoline</p>
+                            <p class="r32i1">5</p>
                         </div>
                         <div class="r32star">
                             <img src="Anh/Right/Box/Star.png" class="r32star1">
@@ -391,14 +365,10 @@
                         <p class="r32price">$71,415</p>
                         <p class="r32place">Kobe, Japan</p>
                         <div class="r32info">
-                            <div class="r32it">
-                                <p class="r32i1">2021</p>
-                                <p class="r32i1">Rear-wheel Drive</p>
-                            </div>   
-                            <div class="r32it">
-                                <p class="r32i1">Electric</p>
-                                <p class="r32i1">5</p>
-                            </div>
+                            <p class="r32i1">2021</p>
+                            <p class="r32i1">Rear-wheel Drive</p>
+                            <p class="r32i1">Electric</p>
+                            <p class="r32i1">5</p>
                         </div>
                         <div class="r32star">
                             <img src="Anh/Right/Box/Star.png" class="r32star1">
@@ -444,10 +414,7 @@
         <div class="p12line"></div>
         <p class="p12bot">2021 Autohunt. All Rights reserved</p>
     </div>
-    <!-- ------------------------------------------------------------------------ -->
-    <div class="ARROWUP">
-        <img src="Anh/Left/Arrow up.png" class="Arrow">
-    </div>
 
+    <script src="SearchResult.js"></script>
 </body>
 </html>

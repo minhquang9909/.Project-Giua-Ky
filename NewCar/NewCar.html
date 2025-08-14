@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>New Car</title>
 
     <link rel="stylesheet" href="NewCar.css">
 </head>
@@ -12,11 +12,11 @@
         <img src="Anh/Left/Arrow up.png" class="Arrow">
     </div>
     <nav class="p1">
-        <img src="Anh/Navigation/Logo.png" class="logo">
+        <img src="Anh/Navigation/Logo.png" class="logo" id="navlogo">
         <div class="menu">
-            <p class="menu1">Used Cars</p>
-            <p class="menu1">Compare</p>
-            <p class="menu1">Sell</p>
+            <p class="menu1" id="usedcar">Used Cars</p>
+            <p class="menu1" id="compare">Compare</p>
+            <p class="menu1" id="sellcar">Sell</p>
             <div class="menu1">
                 <p class="menu1">Article</p>
                 <img src="Anh/Navigation/Menu1.png" class="menu1">
@@ -143,12 +143,12 @@
                         <p class="r2t211">Sort By</p>
                         <img src="Anh/Right/r2/arrow down.png" class="r2t212">
                     </div>
-                    <img src="Anh/Right/r2/bi_list-ul.png" class="r2t22">
-                    <img src="Anh/Right/r2/Group.png" class="r2t23">
+                    <img src="Anh/Right/r2/List.png" class="r2t22" id="listViewBtn" title="List View">
+                    <img src="Anh/Right/r2/Group.png" class="r2t23 active" id="gridViewBtn" title="Grid View">
                 </div>
             </div>
 
-            <div class="r3contener">
+            <div class="r3contener grid-view" id="resultsContainer">
                 <div class="r3box">
                     <div class="r31">
                         <img src="Anh/Right/Box/Corner Ribbon.png" class="r311">
@@ -318,5 +318,7 @@
         <div class="p12line"></div>
         <p class="p12bot">2021 Autohunt. All Rights reserved</p>
     </div>
+
+    <script src="NewCar.js"></script>
 </body>
 </html>

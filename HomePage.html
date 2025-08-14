@@ -3,17 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Home Page</title>
+
     <link rel="stylesheet" href="HomePage.css">
 </head>
 <body>
-    <img src="Anh/Banner.jpg" class="Banner">
+    <div class="banner">
+        <img src="Anh/Banner1.jpg" class="Banner">
+    </div>
     <nav class="p1">
-        <img src="Anh/Navigation/Logo.png" class="logo">
+        <img src="Anh/Navigation/Logo.png" class="logo" id="navlogo">
         <div class="menu">
-            <p class="menu1">Used Cars</p>
-            <p class="menu1">Compare</p>
-            <p class="menu1">Sell</p>
+            <p class="menu1" id="usedcar">Used Cars</p>
+            <p class="menu1" id="compare">Compare</p>
+            <p class="menu1" id="sellcar">Sell</p>
             <div class="menu1">
                 <p class="menu1">Article</p>
                 <img src="Anh/Navigation/Menu1.png" class="menu1">
@@ -38,10 +41,15 @@
     </div>
     <!-- ---------------------------2--------------------------------- -->
     <div class="p3">
-        <img src="Anh/Dot.png" alt="p3dot">
+        <div class="p3dot">
+            <span class="p3dot-item active" data-img="Anh/Banner1.jpg"></span>
+            <span class="p3dot-item" data-img="Anh/Banner2.jpg"></span>
+            <span class="p3dot-item" data-img="Anh/Banner3.jpg"></span>
+            <span class="p3dot-item" data-img="Anh/Banner4.jpg"></span>
+        </div>
         <div class="p3box">
             <div class="p3tab">
-                <p class="p3t">All</p>
+                <p class="p3t active">All</p>
                 <p class="p3t">New</p>
                 <p class="p3t">Used</p>
             </div>
@@ -61,15 +69,17 @@
                     <input placeholder="Location" class="p3-4-1">
                 </div>
                 <div class="p3-5">
-                    <div class="p3-5-1">
+                    <div class="p351box">
                         <p class="p351">Price Range</p>
-                        <P class="p352">$0 - $3,000,000</P>
+                        <p class="p352" id="priceRangeValue">$0 - $3,000,000</p>
                     </div>
-                    <img src="Anh/p3/Frame 45.png" alt="" class="p353">
+                    <div class="p3-5-slider">
+                        <input type="range" min="0" max="3000000" value="0" step="1000" id="minPrice" class="p3range">
+                        <input type="range" min="0" max="3000000" value="3000000" step="1000" id="maxPrice" class="p3range">
+                    </div>
                 </div>
                 <button class="p3button">Search</button>
             </div>
-
         </div>
     </div>
     <!-- ---------------------------3--------------------------------- -->
@@ -77,7 +87,7 @@
         <p class="p41">Recommended Car</p>
         <div class="p42">
             <div class="p421">
-                <p class="p421">New</p>
+                <p class="p421 active">New</p>
                 <p class="p421">Used</p>
             </div>
             <div class="p422">
@@ -234,11 +244,11 @@
     <!-- ---------------------------5--------------------------------- -->
     <div class="p6">
         <div class="p61">
-            <p class="p611">News</p>
-            <p class="p611">Reviews</p>
+            <p class="p611 active" id="news">News</p>
+            <p class="p611" id="reviews">Reviews</p>
         </div>
         <div class="p62">
-            <div class="p621">
+            <div class="p621" id="newsBox">
                 <img src="Anh/p6/car1.jpg" class="p621pic">
                 <p class="p621time">June, 01 2021</p>
                 <div class="p621info">
@@ -277,6 +287,20 @@
                             <img src="Anh/p6/Ava.png" class="p622i2">
                             <p class="p622i2">By Carla Baptista - May, 28 2021</p>
                         </div>
+                    </div>
+                </div>
+            </div>
+            <div class="p621 inactive" id="reviewsBox">
+                <img src="Anh/p6/car1.jpg" class="p621pic">
+                <p class="p621time">June, 01 2021</p>
+                <div class="p621info">
+                    <div class="p621i1">
+                        <p class="p621i11">Etiam Eget</p>
+                        <p class="p621i12">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget praesent gravida sed rutrum suspendisse eu.</p>
+                    </div>
+                    <div class="p621i2">
+                        <img src="Anh/p6/Ava.png" class="p621i2">
+                        <p class="p621i2">By Carla Baptista</p>
                     </div>
                 </div>
             </div>
@@ -405,5 +429,11 @@
         <p class="p12bot">2021 Autohunt. All Rights reserved</p>
     </div>
     <!-- --------------------------12--------------------------------- -->
+    <div class="ARROWUP">
+        <img src="Anh/Arrow up.png" class="Arrow">
+    </div>
+
+
+    <script src="HomePage.js"></script>
 </body>
 </html>
