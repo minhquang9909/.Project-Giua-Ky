@@ -35,16 +35,28 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     rightBtn.addEventListener('click', function() {
-        current = (current + 1) % smallPics.length;
+        i = (i + 1) % smallPics.length;
         updateMainPic();
     });
 
     smallPics.forEach((img, idx) => {
         img.addEventListener('click', function() {
-            current = idx;
+            i = idx;
             updateMainPic();
         });
     });
 
     updateMainPic();
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+    const desc = document.querySelector('.p4l1text');
+    const btn = document.querySelector('.p4l1rm');
+    if (desc && btn) {
+        btn.addEventListener('click', function(e) {
+            e.preventDefault();
+            desc.classList.toggle('expanded');
+            btn.textContent = desc.classList.contains('expanded') ? 'Read Less' : 'Read More';
+        });
+    }
 });

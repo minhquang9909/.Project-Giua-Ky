@@ -5,6 +5,7 @@
     align-items: center;
     margin: 0;
     padding: 0;
+    cursor: pointer;
 }
 body {
     width: 1440px;
@@ -198,14 +199,32 @@ nav.p1 {
                 font-size: 24px;
             }
             p.p4l1text {
+                max-height: 120px;
+                overflow: hidden;
+                display: -webkit-box;
+                -webkit-line-clamp: 6;
+                -webkit-box-orient: vertical;
+                transition: max-height 1s ease-in-out;
                 font-weight: 400;
                 font-size: 16px;
                 mask-image: linear-gradient(to bottom, #fff 20%, transparent 100%);
-
+                margin-top: 20px;
             }
-            p.p4l1rm {
+
+            .p4l1text.expanded {
+                max-height: none;
+                -webkit-line-clamp: unset;
+                mask-image: none;
+            }
+
+            .p4l1rm {
+                margin-top: 10px;
                 font-weight: 400;
                 font-size: 16px;
+                color: #007cc770;
+            }
+
+            .p4l1rm:hover {
                 color: #007cc7;
             }
         }
