@@ -571,11 +571,16 @@ nav.p1 {
 
 
                 .p431star {
+                    width: 282px;
                     display: flex;
                     flex-direction: row;
                     margin-right: 10px;
                     background-position: 10px 10px; 
                     
+                    p.p431star {
+                        font-size: 16px;
+                        margin-left: 5px;
+                    }
                 }
 
             }
@@ -717,11 +722,16 @@ nav.p1 {
 
 
                 .p53star {
+                    width: 282px;
                     display: flex;
                     flex-direction: row;
                     margin-right: 10px;
                     background-position: 10px 10px; 
                     
+                    p.p53star {
+                        font-size: 16px;
+                        margin-left: 5px;
+                    }
                 }
 
             }
@@ -743,6 +753,7 @@ nav.p1 {
             font-weight: 700;
         }
     }
+
 
     .p53 {
         width: 604px;

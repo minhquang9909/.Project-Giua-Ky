@@ -200,7 +200,8 @@ nav.p1 {
             p.p4l1text {
                 font-weight: 400;
                 font-size: 16px;
-                background: linear-gradient(to top, #D7d7d7, #d7d7d720);
+                mask-image: linear-gradient(to bottom, #fff 20%, transparent 100%);
+
             }
             p.p4l1rm {
                 font-weight: 400;

@@ -60,3 +60,86 @@ minPrice.addEventListener('input', updatePriceLabel);
 maxPrice.addEventListener('input', updatePriceLabel);
 
 updatePriceLabel();
+// -----------------right--------------------
+function getCars() {
+    try {
+        return JSON.parse(localStorage.getItem('cars')) || [];
+    } catch (e) {
+        return [];
+    }
+}
+
+function renderCars(cars) {
+    const resultsContainer = document.getElementById('resultsContainer');
+    resultsContainer.innerHTML = '';
+    cars.forEach(car => {
+        // Số sao và số review, mặc định nếu không có
+        const star = typeof car.star === "number" && car.star > 0 ? car.star : 0;
+        const reviews = typeof car.reviews === "number" && car.reviews > 0 ? car.reviews : 0;
+
+        // Tạo HTML cho sao
+        let starHtml = '';
+        for (let i = 1; i <= 5; i++) {
+            if (star >= i) {
+                starHtml += '<i class="fa fa-star" style="color:#FFF"></i>';
+            } else if (star >= i - 0.5) {
+                starHtml += '<i class="fa fa-star-half-alt" style="color:#FFF"></i>';
+            } else {
+                starHtml += '<i class="fa fa-star" style="color:#444"></i>';
+            }
+        }
+
+        const box = document.createElement('div');
+        box.className = 'r3box';
+        box.innerHTML = `
+            <div class="r31">
+                <img src="${car.img}" class="r312">
+            </div>
+            <div class="r32">
+                <p class="r32new">${car.type}</p>
+                <p class="r32name">${car.name}</p>
+                <p class="r32price">${car.price}</p>
+                <p class="r32place">${car.place}</p>
+                <div class="r32info">
+                    <p class="r32i1">${car.year}</p>
+                    <p class="r32i2">${car.driveTrain}</p>
+                    <p class="r32i3">${car.fuel}</p>
+                    <p class="r32i4">${car.people}</p>
+                </div>
+                <div class="r32star">
+                    ${starHtml}
+                    <span style="margin-left:8px; color:#aaa;">(${reviews} Reviews)</span>
+                </div>
+            </div>
+        `;
+        resultsContainer.appendChild(box);
+    });
+}
+
+// Lọc xe theo filter
+function filterCars() {
+    const cars = getCars();
+
+    // Lấy các năm được chọn
+    const selectedYears = Array.from(document.querySelectorAll('.filter-year:checked')).map(cb => cb.value);
+    // Lấy các hãng được chọn
+    const selectedBrands = Array.from(document.querySelectorAll('.filter-brand:checked')).map(cb => cb.value);
+
+    let filtered = cars;
+    if (selectedYears.length) {
+        filtered = filtered.filter(car => selectedYears.includes(car.year));
+    }
+    if (selectedBrands.length) {
+        filtered = filtered.filter(car => selectedBrands.some(brand => car.name.toLowerCase().includes(brand.toLowerCase())));
+    }
+
+    renderCars(filtered);
+}
+
+// Gắn event cho filter
+document.querySelectorAll('.filter-year, .filter-brand').forEach(cb => {
+    cb.addEventListener('change', filterCars);
+});
+
+// Lần đầu load trang
+filterCars();
