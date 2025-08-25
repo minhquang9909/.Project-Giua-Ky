@@ -14,6 +14,9 @@ document.querySelector("#compare").addEventListener("click", function() {
 document.querySelector("#navlogo").addEventListener("click", function() {
     window.location.href = "../HomePage.html";
 });
+document.querySelector(".login1").addEventListener("click", function() {
+    window.location.href = "../Login/Login.html";
+});
 // ------------p3------------
 document.querySelectorAll('.p3option').forEach(optionBox => {
     optionBox.addEventListener('click', function(e) {

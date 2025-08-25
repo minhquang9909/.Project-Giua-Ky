@@ -13,9 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     document.querySelectorAll('.r32').forEach(carEl => {
-        // Tìm phần tử cha .r3box
         const r3box = carEl.closest('.r3box');
-        // Lấy ảnh .r312 trong .r3box
         const imgEl = r3box ? r3box.querySelector('.r312') : null;
         const newCar = {
             type: carEl.querySelector('.r32new')?.innerText.trim() || "",
@@ -35,7 +33,6 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-    // Lưu lại vào localStorage
     localStorage.setItem('cars', JSON.stringify(cars));
 });
 

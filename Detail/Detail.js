@@ -17,6 +17,9 @@ document.querySelector("#sellcar").addEventListener("click", function() {
 document.querySelector("#navlogo").addEventListener("click", function() {
     window.location.href = "../HomePage.html";
 });
+document.querySelector(".login1").addEventListener("click", function() {
+    window.location.href = "../Login/Login.html";
+});
 // ------------p3------------
 document.addEventListener("DOMContentLoaded", function() {
     const smallPics = Array.from(document.querySelectorAll('.p32p'));
