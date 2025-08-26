@@ -14,9 +14,6 @@ document.querySelector("#compare").addEventListener("click", function() {
 document.querySelector("#navlogo").addEventListener("click", function() {
     window.location.href = "../HomePage.html";
 });
-document.querySelector(".login1").addEventListener("click", function() {
-    window.location.href = "../Login/Login.html";
-});
 // ------------p3------------
 document.querySelectorAll('.p3option').forEach(optionBox => {
     optionBox.addEventListener('click', function(e) {
@@ -28,7 +25,6 @@ document.querySelectorAll('.p3option').forEach(optionBox => {
     });
 });
 
-// Show dropdown on input focus/click
 document.querySelectorAll('.p3211').forEach(input => {
     input.addEventListener('focus', function() {
         const optionBox = input.nextElementSibling;
@@ -36,7 +32,6 @@ document.querySelectorAll('.p3211').forEach(input => {
             optionBox.style.display = 'flex';
         }
     });
-    // Hide dropdown when input loses focus (with delay for click)
     input.addEventListener('blur', function() {
         setTimeout(() => {
             const optionBox = input.nextElementSibling;
@@ -47,7 +42,6 @@ document.querySelectorAll('.p3211').forEach(input => {
     });
 });
 
-// Filter dropdown options by search
 document.querySelectorAll('.p3o1').forEach(searchInput => {
     searchInput.addEventListener('input', function() {
         const filter = searchInput.value.toLowerCase();

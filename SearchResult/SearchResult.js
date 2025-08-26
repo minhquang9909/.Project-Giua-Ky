@@ -117,15 +117,18 @@ function renderCars(cars) {
         `;
         resultsContainer.appendChild(box);
     });
+
+    // Gán lại sự kiện click cho tất cả .r3box sau khi render
+    document.querySelectorAll('.r3box').forEach(box => {
+        box.addEventListener('click', function() {
+            window.location.href = `../Detail/Detail.html`;
+        });
+    });
 }
 
-// Lọc xe theo filter
 function filterCars() {
     const cars = getCars();
-
-    // Lấy các năm được chọn
     const selectedYears = Array.from(document.querySelectorAll('.filter-year:checked')).map(cb => cb.value);
-    // Lấy các hãng được chọn
     const selectedBrands = Array.from(document.querySelectorAll('.filter-brand:checked')).map(cb => cb.value);
 
     let filtered = cars;
@@ -139,10 +142,8 @@ function filterCars() {
     renderCars(filtered);
 }
 
-// Gắn event cho filter
 document.querySelectorAll('.filter-year, .filter-brand').forEach(cb => {
     cb.addEventListener('change', filterCars);
 });
 
-// Lần đầu load trang
 filterCars();

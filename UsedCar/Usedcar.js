@@ -93,6 +93,13 @@ function renderCars(cars) {
         `;
         resultsContainer.appendChild(box);
     });
+
+
+    document.querySelectorAll('.r3box').forEach(box => {
+        box.addEventListener('click', function() {
+            window.location.href = `../Detail/Detail.html`;
+        });
+    });
 }
 
 function filterCars() {
